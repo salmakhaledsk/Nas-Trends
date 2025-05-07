@@ -1,0 +1,15 @@
+.hero-section {
+    background: url('https://www.nastrends.com/cdn/shop/files/1_9852c2e7-30b9-4306-a7fc-ad3c9c35331f.jpg?v=1745180394') no-repeat center center/cover;
+    height: 70vh;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+  }
+  
+  .team img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

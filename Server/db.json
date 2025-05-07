@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": "100",
+      "name": "Black Sweetshirt",
+      "quantity": 10,
+      "price": 100,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/files/14_e4391e5f-37ff-4288-a3c3-a20e49c8d958_540x.jpg?v=1739804684",
+      "catId": 1
+    },
+    {
+      "id": "200",
+      "name": " Scarfes",
+      "quantity": 0,
+      "price": 200,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/SignatureTiara_4_540x.jpg?v=1620128408",
+      "catId": 2
+    },
+    {
+      "id": "300",
+      "name": " Bages",
+      "quantity": 30,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/files/51_1721075e-5b2a-481f-a076-07b4e42bd258.jpg?v=1693396635",
+      "catId": 3
+    },
+    {
+      "id": "400",
+      "name": "Sweetshirt",
+      "quantity": 30,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/files/19_5786fed1-1262-4540-8298-1406c78e61ac_540x.jpg?v=1739804687",
+      "catId": 1
+    },
+    {
+      "id": "500",
+      "name": "Scarfes",
+      "quantity": 30,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/BlueVintage_4_540x.jpg?v=1620127349",
+      "catId": 2
+    },
+    {
+      "id": "600",
+      "name": "Bages",
+      "quantity": 30,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/1_c4d7c5f6-c3a9-4f30-9087-c53a76faf581_540x.jpg?v=1678351875",
+      "catId": 3
+    },
+    {
+      "id": "700",
+      "name": "Sweetshirt",
+      "quantity": 30,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/111_7_540x.jpg?v=1739804770",
+      "catId": 1
+    },
+    {
+      "id": "800",
+      "name": "Scarfes",
+      "quantity": 1,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/FreeSpiritinnavy_2_540x.jpg?v=1620127626",
+      "catId": 2
+    },
+    {
+      "id": "900",
+      "name": "Bages",
+      "quantity": 0,
+      "price": 300,
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/38_540x.jpg?v=1693396635",
+      "catId": 3
+    }
+   
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Sweetshirt",
+      "imgUrl": "https://www.nastrends.com/cdn/shop/files/14_e4391e5f-37ff-4288-a3c3-a20e49c8d958_540x.jpg?v=1739804684"
+    },
+    {
+      "id": "2",
+      "name": "Scarfes",
+      "imgUrl": "https://www.nastrends.com/cdn/shop/products/SignatureTiara_4_540x.jpg?v=1620128408"
+    },
+    {
+      "id": "3",
+      "name": "Bages",
+      "imgUrl": "https://www.nastrends.com/cdn/shop/files/51_1721075e-5b2a-481f-a076-07b4e42bd258.jpg?v=1693396635"
+    }
+  ]
+}

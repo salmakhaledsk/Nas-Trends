@@ -1,0 +1,109 @@
+<div 
+class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow p-4" style="width: 400px">
+    <h2 class="text-center">Insert Product</h2>
+<!-- {{product | json}} -->
+    <form #addproductForm="ngForm" (ngSubmit)="addNewProduct()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Product Name</label>
+        <input
+          [(ngModel)]="product.name"
+          #inputname="ngModel"
+          type="text"
+          id="name"
+          class="form-control"
+          name="name"
+          required
+          pattern="^[a-zA-Z ]{3,15}$"
+        />
+        <!-- {{inputname.errors | json}} -->
+        @if(inputname.touched) {
+        <div class="">
+          @if(inputname.errors?.['required']) {
+          <span class="text-danger alert-danger"
+            >*product name is required</span
+          >
+          } @if(inputname.errors?.['pattern']) {
+          <span class="text-danger alert-danger"
+            > *product name must be at least 3 charecters </span>
+          }
+        </div>
+        }
+      </div>
+      <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="type" class="form-label">Category</label>
+        <select id="type" class="form-select" name="type" required>
+          <option
+            *ngFor="let cat of catList; trackBy: trackByFn"
+            [value]="cat.id">
+            {{ cat.name }}
+          </option>
+        </select>
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+      <label for="price" class="form-label">Price</label>
+      <input
+        [(ngModel)]="product.price"
+        #inputprice="ngModel"
+        type="number"
+        id="price"
+        class="form-control"
+        name="price"
+        required
+        min="1"
+      />
+      @if(inputprice.touched) {
+      <div>
+        @if(inputprice.errors?.['required']) {
+        <span class="text-danger alert-danger">*Price is required</span>
+        } @if(inputprice.errors?.['min']) {
+        <span class="text-danger alert-danger"
+          >*Price must be greater than 0</span
+        >
+        }
+      </div>
+      }
+      <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input
+          [(ngModel)]="product.quantity"
+          #inputquantity="ngModel"
+          type="number"
+          id="quantity"
+          class="form-control"
+          name="quantity"
+          required
+          min="1"
+        />
+        @if(inputquantity.touched) {
+        <div>
+          @if(inputquantity.errors?.['required']) {
+          <span class="text-danger alert-danger">*Quantity is required</span>
+          } @if(inputquantity.errors?.['min']) {
+          <span class="text-danger alert-danger"
+            >*Quantity must be greater than 0</span
+          >
+          }
+        </div>
+        }
+      </div>
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Image</label>
+        <input
+          type="file"
+          #inputimage="ngModel"
+          id="Image"
+          class="form-control"
+          name="Image"
+          [(ngModel)]="product.imgUrl"
+          required
+        />
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+      <button [disabled]="addproductForm.invalid" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
+</div>

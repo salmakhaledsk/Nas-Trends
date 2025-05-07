@@ -1,0 +1,57 @@
+
+<!-- <h1>{{totalOrderPrice}}</h1> -->
+ <!-- <h1>Todays Date {{mydate |date }}   </h1> -->
+ 
+
+ 
+ <div class="row row-cols-1 row-cols-md-3 g-4 my-5 " style="background-color: rgb(228, 226, 226);">
+  @for ( prd of filterdProducts; track prd.id) {
+    <div class="col">
+      <div
+      class="card h-100"
+      [ngStyle]="{ 'background-color': prd.quantity <= 0 ? '#FFDEDE' : '' }"
+    >
+        <img appBorderImage defaultColor="Pink" [src]="prd.imgUrl" class="card-img-top"  height="520" style="position:relative ">
+        <!-- <button class="btn btn-danger" style="position: absolute;"  (click)="goToDetails(prd.id)">Details</button> -->
+        <button class="btn btn-danger" style="position: absolute; "[routerLink]="['/details',prd.id]">Details</button>
+
+        <div class="card-body">
+          <h5 class="card-title hh">{{ products.indexOf(prd) + 1 }} {{ prd.name | uppercase}}</h5>
+          <p class="card-text">Price: {{ prd.price }}</p>
+
+          <!-- <p class="card-text" [ngSwitch]="prd.quantity">quantity:
+            <span *ngSwitchCase="0"> Out of Stock </span>
+            <span *ngSwitchCase="1"> Last Item </span>
+            <span *ngSwitchDefault=""> {{ prd.quantity }} </span>
+          </p> -->
+@switch (prd.quantity) {
+  @case (0) {
+    <span> Out Of Stock </span>
+  }
+  @case (1) {
+    <span> Last Item</span>
+  }
+  @default {
+    <span> {{ prd.quantity }} </span>
+  }
+}
+          <div class="d-flex">
+            <input type="number" class="form-control gap-5" #itemCount>
+            <button class="btn btn-warning" (click)="buy(prd.price, itemCount.value)">BUY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  }
+  @empty {
+    <div class="alert alert-danger m-auto " style="text-align: center;" role="alert">
+      No Products Found
+    </div>
+  }
+
+</div>  
+
+
+<!--  [style.display]="prd.catId!=selectedCatId?'none':'block' " -->
+<!-- //[class.bg-danger]="prd.quantity <= 0    class binding -->
